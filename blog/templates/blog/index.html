@@ -1,0 +1,46 @@
+{% extends 'blog/basic.html' %}
+{% load static%}
+{% block body %}
+<div class="container">
+   <br> <h2>Support for parents</h2><br>
+
+<div class="row my-2">
+    {% for item in myposts %}
+
+
+        <div class="col-md-6">
+            <div
+                class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">{{item.head0}}</strong>
+                    <h3 class="mb-0">{{item.title}}</h3>
+                    <div class="mb-1 text-muted"></div>
+                    <p class="card-text mb-auto">{{item.head1}}</p>
+                    <a href="blogpost/{{item.post_id}}" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="{% static 'foot.jpg' %} " class="bd-placeholder-img" width="200" height="250"
+                        aria-label="Placeholder: Thumbnail"/>
+
+                </div>
+            </div>
+        </div>
+{% if forloop.counter|divisibleby:2 %}
+    </div><div class="row my-2">
+    {% endif %}
+
+    {% endfor %}
+
+
+    <div class="container">
+        <br> <h2>Online Forum</h2>
+     <p class="justify"> Our online community forum is a close-knit community where parents have an opportunity to support one another through meaningful conversations, mentor-ship, and social meet ups.
+
+        You can share parenting experiences, tips and tricks, talk about issues, and make new friends. You can have a coffee or tea, and chat online with Q&A. From time to time, we’ll have upcoming social events posted on our website, forum and social platforms for all parents.
+        
+     </p>
+     <button class="btn btn-success my-2 my-sm-0"
+     text-align="center" type="submit">Join Forum</button><br>
+    </div>        
+    
+    {% endblock %}
