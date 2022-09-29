@@ -12,7 +12,7 @@ urlpatterns = [
     path('login',views.login,name="login"),
     path('bot',views.bot,name="bot"),
     path('logindoc',views.logindoc,name="logindoc"),
-    path('mainpage',views.mainpage,name="mainpage"),
-    path('mainpagedoc',views.mainpagedoc,name="mainpagedoc")
+    path('mainpage',views.login,name="mainpage"),
+    path('mainpagedoc',views.logindoc,name="mainpagedoc")
 
 ]

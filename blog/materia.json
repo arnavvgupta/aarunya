@@ -1,22 +1,5 @@
 [
 {
-  "model": "auth.user",
-  "fields": {
-    "password": "pbkdf2_sha256$320000$JZrP6KWccmZqnR1csjoWB4$zIVi+Z81fsPssD82/0QA9b+gNp5un2EcBsY679GRLXk=",
-    "last_login": "2022-09-27T17:12:24.766Z",
-    "is_superuser": true,
-    "username": "mansha",
-    "first_name": "",
-    "last_name": "",
-    "email": "mansha@gmail.com",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2022-09-27T11:47:23.759Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
   "model": "sessions.session",
   "pk": "fgy5g8kt2j5ng8gc470k6c5grg3xbm6o",
   "fields": {

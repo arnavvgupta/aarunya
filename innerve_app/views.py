@@ -63,7 +63,7 @@ def login(request):
         user=authenticate(email=loginusername,password=loginpassword)
         print(user)
         if len(user)>0:
-            return redirect("mainpage")
+            return render(request,"mainpage.html")
         else:
             messages.error(request,"Invalid credentials!")
 
@@ -76,7 +76,7 @@ def logindoc(request):
         use=authenticatedoc(email=loginusername,password=loginpassword)
         print(use)
         if len(use)>0:
-            return redirect("mainpagedoc")
+            return render(request,"mainpagedoc.html")
         else:
             messages.error(request,"Invalid credentials!")
 
@@ -85,7 +85,11 @@ def logindoc(request):
 def bot(request):
     return render(request,'bot.html')
 def mainpage(request):
-    
-    return render(request,'mainpage.html')
+    alldoc=Doctor.objects.all()
+    context={'doc':alldoc}
+    return render(request,'mainpage.html',context)
 def mainpagedoc(request):
-    return render(request,'mainpagedoc.html')
+    return render(request,"mainpagedoc.html")
+
+
+    
