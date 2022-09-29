@@ -20,6 +20,7 @@ class Doctor(models.Model):
     # sno= models.AutoField(primary_key=True)
      dname= models.CharField(max_length=255)
      email= models.CharField(max_length=100)
+     password= models.TextField(null=True)
      dob= models.DateField(null=False)
      phone=models.IntegerField(null=True)
      profile=models.CharField(max_length=23)
