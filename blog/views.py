@@ -18,6 +18,11 @@ def blogpost(request, id):
 def search(request):
     query= request.GET.get('search')
     allProds = []
+
+
+    
+
+
     
 
 

@@ -3,6 +3,14 @@ from turtle import bgcolor
 from django.shortcuts import render,redirect,HttpResponse
 from .models import Doctor, Patient
 from django.contrib import messages
+from django.contrib.auth import login
+from django.contrib.auth.models import User
+def authenticate(email,password):
+    patient=Patient.objects.filter(email=email,password=password)
+    return patient
+def authenticatedoc(email,password):
+    doc=Doctor.objects.filter(email=email,password=password)
+    return doc
 
 def index(request):
     return render(request,'first.html')
@@ -23,6 +31,7 @@ def patient(request):
         patient = Patient(pname=pname, email=email, dob=dob,pf=pf, bg=bg,content=content,extra=extra, password=password)
         patient.save()
         messages.success(request, " The patient has been registered!")
+        return redirect('login')
         
     return render(request,"patient.html")
 def doctor(request):
@@ -30,15 +39,17 @@ def doctor(request):
         
         dname = request.POST['dname']
         email = request.POST['email']
+        password=request.POST['password']
         dob = request.POST['dob']
         phone=request.POST['phone']
         profile = request.POST['profile']
         category = request.POST['category']
         qualification = request.POST['qualification']
         fee= request.POST['fee']
-        doctor = Doctor(dname=dname, email=email, dob=dob, phone=phone,profile=profile,qualification=qualification,fee=fee,category=category)
+        doctor = Doctor(dname=dname, email=email, password=password,dob=dob, phone=phone,profile=profile,qualification=qualification,fee=fee,category=category)
         doctor.save()
         messages.success(request, " You have been registered!")
+        return redirect('login')
     return render(request,'doctor.html')
 
 def free(request):
@@ -46,23 +57,39 @@ def free(request):
 def paid(request):
     return render(request,'paid.html')
 def login(request):
-    return render(request,'login.html')
     if request.method=="POST":
-        loginusername=request.POST['loginusername']
-        loginpassword=request.POST['loginpassword']
-
-        user=authenticate(username=loginusername,password=loginpassword)
-        if user is not None:
-            login(request,user)
-            messages.success(request,"Successfully Logged In")
-            return redirect("home")
+        loginusername=request.POST['email']
+        loginpassword=request.POST['password']
+        user=authenticate(email=loginusername,password=loginpassword)
+        print(user)
+        if len(user)>0:
+            return render(request,"mainpage.html")
         else:
             messages.error(request,"Invalid credentials!")
-            return redirect("home")
 
-    return HttpResponse("404- Not Found")
+    return render(request,'login.html')
+
+def logindoc(request):
+    if request.method=="POST":
+        loginusername=request.POST['email']
+        loginpassword=request.POST['password']
+        use=authenticatedoc(email=loginusername,password=loginpassword)
+        print(use)
+        if len(use)>0:
+            return render(request,"mainpagedoc.html")
+        else:
+            messages.error(request,"Invalid credentials!")
+
+    return render(request,'logindoc.html')
 
 def bot(request):
     return render(request,'bot.html')
+def mainpage(request):
+    alldoc=Doctor.objects.all()
+    context={'doc':alldoc}
+    return render(request,'mainpage.html',context)
+def mainpagedoc(request):
+    return render(request,"mainpagedoc.html")
 
 
+    

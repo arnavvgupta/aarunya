@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <style>
+        body{
+            background-color: beige ;
+        }
+        
+        
+        h1{font-weight: bolder;
+            color: #F96666;
+            font-family: cursive;
+            text-align: center;
+            
+            }
+        
+        
+        .content-table{
+            border-collapse: collapse;
+            margin: auto;
+            height: 500px;
+            font-size: 0.9em;
+            min-width: 500px;
+            
+          }
+          .content-table thead tr{
+            background-color: lightpink;
+            text-align: left; 
+            padding: 20px;
+            font-weight: bold;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            box-shadow: 0 0 20px #F96666(0,0,0,1);
+          }
+          .content-table th,
+          .content-table td{
+            padding: 12px 15px;
+          }
+          .content-table tbody tr{
+            border-bottom: 1px solid lightgray;
+          }
+          
+          .content-table tbody tr:last-of-type{
+            border-bottom: 2px solid #EF7B7B;
+          }
+        
+          .economic-content button{
+            color: black;
+          
+            font-weight: 400;
+            font-size: 16px;
+            height: 50px;
+            width: 220px;
+            line-height: 24px;
+            text-align: center;
+            background: #F96666;
+            border-radius: 25px;
+            border: none;
+            margin: 2rem;
+          }
+        
+          
+        .content-table td img{
+          height: 200px;
+          width: 400px;
+          border-radius: 10px 10px 10px 10px;
+          border: 2px solid black;
+        }
+        
+        #display_image{
+            border: 1px solid red;
+            width: 400px;
+            height: 400px;
+            border-radius: 10px 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+            
+        
+        
+        }
+        #display_image2{
+            border: 1px solid red;
+            width: 400px;
+            height: 400px;
+            border-radius: 10px 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        
+        
+        
+        }
+        #display_image3{
+            border: 1px solid red;
+            width: 400px;
+            height: 400px;
+            border-radius: 10px 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        
+        
+        
+        }#display_image4{
+            border: 1px solid red;
+            width: 400px;
+            height: 400px;
+            border-radius: 10px 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        
+        
+        
+        }#display_image5{
+            border: 1px solid red;
+            width: 400px;
+            height: 400px;
+            border-radius: 10px 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        
+        
+        
+        }#display_image6{
+            border: 1px solid red;
+            width: 400px;
+            height: 400px;
+            border-radius: 10px 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        
+        
+        
+        }
+        .content-table tbody tr td img{
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+    <div class="container">
+        <h1> PATIENT DETAILS </h1>
+    </div>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th> S.No </th>
+                <th> patient name</th>
+                <th> age</th>
+                <th> risk</th>
+                <th>phone no</th>
+                <th> Uupload document</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td> 1 </td>
+                <td> Anuradha </td>
+                <td> 32 </td>
+                <td>low</td>
+                <td>97****</td>
+                <td>
+                    <input id="image_input"  class="file-upload-input" type="file"  accept="Image/*">
+                    <div id="display_image">
+
+                    </div>
+                </td>
+
+
+            </tr>
+            <tr>
+                <td> 2 </td>
+                <td> Shikha Sharma </td>
+                <td> 28</td>
+                <td>high</td>
+                <td> +91***38</td>
+                <td>
+                    <input id="image_input2"  class="file-upload-input" type="file"  accept="Image/*">
+                    <div id="display_image2">
+
+                    </div>
+                </td>
+
+
+
+            </tr>
+            <tr>
+                <td> 3 </td>
+                <td> DEesha dheer </td>
+                <td>35 </td>
+                <td>high</td>
+                <td> +91-11-25400336</td>
+                <td>
+                    <input id="image_input3"  class="file-upload-input" type="file"  accept="Image/*">
+                    <div id="display_image3">
+
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td> 4 </td>
+                <td> Manika Gupta </td>
+                <td> 27 </td>
+                <td> low</td>
+                <td>74****</td>
+                <td>
+                    <input id="image_input4"  class="file-upload-input" type="file"  accept="Image/*">
+                    <div id="display_image4">
+
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td> 5 </td>
+                <td> Gayatri Agnihotri </td>
+                <td> 29</td>
+                <td>high</td>
+                <td> +9***12389</td>
+                <td>
+                    <input id="image_input5"  class="file-upload-input" type="file"  accept="Image/*">
+                    <div id="display_image5">
+
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td> 6 </td>
+                <td> Meeta singh </td>
+                <td> 37 </td>
+                <td> high</td>
+                <td>98***</td>
+                <td>
+                    <input id="image_input6"  class="file-upload-input" type="file"  accept="Image/*">
+                    <div id="display_image6">
+
+                    </div>
+                </td>
+
+            </tr>
+        </tbody>
+                
+    </table>
+
+
+
+    <script>
+        const image_input = document.querySelector("#image_input");
+var uploaded_image="";
+
+image_input.addEventListener("change", function() {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    const uploaded_image = reader.result;
+    document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+
+
+const image_input2 = document.querySelector("#image_input2");
+var uploaded_image2="";
+
+image_input2.addEventListener("change", function() {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    const uploaded_image2 = reader.result;
+    document.querySelector("#display_image2").style.backgroundImage = `url(${uploaded_image2})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+
+
+const image_input3 = document.querySelector("#image_input3");
+var uploaded_image3="";
+
+image_input3.addEventListener("change", function() {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    const uploaded_image3 = reader.result;
+    document.querySelector("#display_image3").style.backgroundImage = `url(${uploaded_image3})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+
+const image_input4 = document.querySelector("#image_input4");
+var uploaded_image4="";
+
+image_input4.addEventListener("change", function() {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    const uploaded_image4 = reader.result;
+    document.querySelector("#display_image4").style.backgroundImage = `url(${uploaded_image4})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+
+
+
+const image_input5 = document.querySelector("#image_input5");
+var uploaded_image5="";
+
+image_input5.addEventListener("change", function() {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    const uploaded_image5 = reader.result;
+    document.querySelector("#display_image5").style.backgroundImage = `url(${uploaded_image5})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+
+
+
+
+const image_input6 = document.querySelector("#image_input6");
+var uploaded_image6="";
+
+image_input6.addEventListener("change", function() {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => {
+    const uploaded_image6= reader.result;
+    document.querySelector("#display_image6").style.backgroundImage = `url(${uploaded_image6})`;
+  });
+  reader.readAsDataURL(this.files[0]);
+});
+    </script>
+    <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>

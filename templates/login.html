@@ -25,6 +25,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background:#FFF5E4;
           }
           .form {
             position: relative;
@@ -138,24 +139,36 @@
             color: inherit;
           }
     </style>
-  <div class="login-wrapper">
-    <form action="" class="form">
-      <img src="{% static 'test1.png' %}" alt="">
+  <div class="login-wrapper">  
+    <form action="" class="form" method="POST">
+      {% csrf_token %}
+      <img src="{% static 'mombaby.png' %}" alt="">
+      <div class="text"  >
+        {% for message in messages  %}            
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+              <strong>Message : </strong> {{ message }}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {% endfor %}  
+          </div>
       <h2>Login</h2>
       <div class="input-group">
-        <input type="text" name="loginUser" id="loginUser" required>
-        <label for="loginUser">User Name</label>
+        <input type="text" name="email" id="loginUser" required>
+        <label for="loginUser" >Email</label>
       </div>
       <div class="input-group">
-        <input type="password" name="loginPassword" id="loginPassword" required>
-        <label for="loginPassword">Password</label>
+        <input type="password" name="password" id="loginPassword" required>
+        <label for="loginPassword"name="pass">Password</label>
       </div>
       <input type="submit" value="Login" class="submit-btn">
       <a href="#forgot-pw" class="forgot-pw">Forgot Password?</a>
     </form>
 
     <div id="forgot-pw">
-      <form action="" class="form">
+      <form action="" class="form" method="POST">
+        {% csrf_token %}
         <a href="#" class="close">&times;</a>
         <h2>Reset Password</h2>
         <div class="input-group">

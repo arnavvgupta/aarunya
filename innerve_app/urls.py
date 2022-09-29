@@ -10,5 +10,9 @@ urlpatterns = [
     path('free',views.free,name="free"),
     path('paid',views.paid,name="paid"),
     path('login',views.login,name="login"),
-    path('bot',views.bot,name="bot")
+    path('bot',views.bot,name="bot"),
+    path('logindoc',views.logindoc,name="logindoc"),
+    path('mainpage',views.login,name="mainpage"),
+    path('mainpagedoc',views.logindoc,name="mainpagedoc")
+
 ]
