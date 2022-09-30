@@ -6,6 +6,9 @@
 <link rel="icon" href="{% static 'logo.png' %}">
   <meta charset="utf-8">
   <title>Aarunya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Freehand&family=Patrick+Hand&family=Poppins:ital,wght@1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +17,9 @@
   <link rel="icon" type="image/x-icon" href="/{}/favicon.ico">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <!-- JavaScript Bundle with Popper -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
@@ -21,15 +27,17 @@
 <body>
   <style>
     .container{
-      max-width: 70000px;
+      max-width: 700000px;
       margin: auto;
-      padding: 0 0px;
       background:#911F27;
+      padding-top: 2rem!important;
+      margin-top: 0rem!important;
+      
    }
    #tittle{
      background-color: #FFF5E4;
-   
-   
+
+
    }
    h5{
      color:##EF7B7B;
@@ -42,7 +50,7 @@
    }
    .navbar{
      background-color:#911F27;
-   
+
    }
    h4{
      padding-top: 5rem;
@@ -56,7 +64,7 @@
      font-family: 'Caveat Bold 700 ', cursive;
      padding-left:5rem;
      font-weight: bolder;
-   
+
    }
    .nav-item{font-family: 'Caveat SemiBold 600', cursive;
    padding-left: 2rem;
@@ -67,27 +75,30 @@
          float: left;
          margin: 5px;
        }
-   
+
    .card-text {
          text-align: justify;
          font-size: 25px;
        }
-   
-   .testtext{font-family: 'Secular One', sans-serif;
+
+   .testtext{
    text-align: center;
-   font-weight: bold;
-   color: #911F27;
-   
+   font-weight: lighter;
+   color: #919190;
+   padding:2rem;
+
+
+
    }
    .crousel-inner{
      z-index: 2;
    }
-   
-   
-   
-   
-   
-   
+
+
+
+
+
+
    .heading{
      padding-left: 15rem;
      font-size: 2rem;
@@ -95,8 +106,8 @@
      text-align: center;
      padding-top: 10rem;
      text-align: center;
-   
-   
+
+
    }
    .heading1{
      padding-left: 15rem;
@@ -104,44 +115,45 @@
      font-family: 'Secular One', sans-serif;
      text-align: center;
    }
-   
+
    .col-lg-6{
      font-family: 'Caveat SemiBold 600', cursive;
      text-align: center;
      color: #911F27;
      background-color: #FFF5E4;
-   
-   
-   
+
+
+
    }
-  
-   
+
+
    .logopicture{
      width: 30rem;
      height: 25rem;
      padding-right: 2rem;
-   
-   
+
+
    }
    .logo{
      background-color: #FFF5E4;
-   
-   
+
+
    }
-   
-   
+
+
    .navbar-text{font-family: 'Caveat Bold 700', cursive;
    padding-left: 2rem;
-   
+
    }
    .main{
      width: 30rem;
      height:35rem;
      text-align: center;
-   
+     padding-top: 1rem;
+
    }
    .container-fluid{
-     padding: 5% 10%;
+     padding: 0;
    }
    .buttonpri{
      padding-left: 35%;
@@ -163,22 +175,22 @@
      text-align: center;
      background-color:#FFF5E4;
    }
-   
+
    .testimage{width:15rem;
    height:15rem;
-   
+
    }
    .card-text{
      color:#2C3333;
-   font-family: sans-serif;
+
      font-size: 25px;
      padding-left: 4rem;
      padding-right: 2rem;
      max-width: 1800px;
-     font-weight: normal;
-   
-   
-   
+     font-weight: lighter;
+
+
+
    }
    .aarunya{
      color: #EE6983;
@@ -187,27 +199,28 @@
    .arrunyatext{
        color: #EE6983;
    }
-   
+
    .card-tittle{
      color: #911F27;
-     text-align: center;
+     text-align: Centre;
      padding-bottom: 2rem;
      font-family: 'Secular One', sans-serif;
      font-weight:bolder;
-   
-   
+
+
    }
-   .card-text{  color: #EE6983;;
+   .card-text{  color: black;
      text-align: center;
      padding-bottom: 2rem;
-     font-family: 'Secular One', sans-serif;
+
      font-weight: normal;
-   
+
+
    }
    .card-body{
      background-color: #FFF5E4;
-     margin:1rem;
      padding:0;
+     text-align: center;
    }
    .cont{
            max-width: 1170px;
@@ -216,14 +229,15 @@
        }
        .footer ul{
            list-style: none;
-   
+
        }
-   
+
        .footer{
            background-color: lightpink;
-   
+           background:#911F27;
+
            padding: 20px 0px;
-   
+
            text-align:center;
        }
        .row{
@@ -240,12 +254,12 @@
        color: #911F27;
        font-weight: bold;
      }
-   
-   
-   
+
+
+
        .footer-col ul li:not(:last-child){
            margin-bottom: 10px;
-   
+
        }
        .footer-col ul li a{
            text-decoration: none;
@@ -255,6 +269,19 @@
            padding: 10px;
            background-color: black;
        }
+       .gradient-custom {
+        background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%),
+          linear-gradient(121.28deg, #669600 0%, #ff0000 100%),
+          linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
+          radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
+          radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+        background-blend-mode: screen, color-dodge, overlay, difference, normal;
+      }
+      .carousel-indicators {
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+      }
   </style>
   <section id="tittle">
     <nav class="navbar navbar-expand-lg  navbar-dark navb">
@@ -265,19 +292,19 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <span class="navbar-text">
-          <h5> Best care for you and yours !!</h5>
+          <h5> best care for you and your's</h5>
         </span>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class=nav-link href="">contact</a>
+            <a class=nav-link href="">Contact</a>
 
           </li>
           <li class="nav-item">
-            <a class=nav-link href="/logindoc">doctor login</a>
+            <a class=nav-link href="/logindoc">Doctor Login</a>
 
           </li>
           <li class="nav-item">
-            <a class=nav-link href="/login">login</a>
+            <a class=nav-link href="/login">Login</a>
 
           </li>
         </ul>
@@ -306,10 +333,10 @@
       <div class="row">
 
         <div class="col-lg-12">
-          <div class="card border-danger mb-3  style=" max-width: 18rem;">
+          <div class="card border-danger mb-3  style=" max-width: 18rem; ">
             <div class="card">
               <div class="card-body">
-                <h2 class="card-tittle">ABOUT US</h2>
+                <h2 class="card-tittle" style="margin-left:25rem">ABOUT US</h2>
 
                 <img src="{% static 'newunit.png' %}" class="logopicture" >
                 <p class="card-text introduction">
@@ -324,59 +351,152 @@
         </div>
       </div>
   </section>
-
-  <section id="testimonials">
-        <div class="card">
-    <div id="carouseltestimonial" class="carousel slide" data-bs-ride="false">
-
-      <div class="carousel-inner">
-        <div class="carousel-item active" style="background-color:white
-         ;">
-          <h2 class="testtext">my experience with Aarunya was great it coudn't have been better</h2>
-          <img class="testimage" src="{% static 'test1.png' %}" alt="dog">
-          <em>Sanjana</em>
-
-        </div>
-        <div class="carousel-item" style="background-color: white;">
-          <h2 class="testtext" >Aarunya made my journey easy</h2>
-          <img class="testimage" src="{% static 'test2.png' %}" alt="dog phot">
-          <em>Riya</em>
+  
+  <section class="gradient-custom">
+    <div class="container my-5 py-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+          <div class="text-center mb-4 pb-2">
+            <i class="fas fa-quote-left fa-3x text-white"></i>
+          </div>
+  
+          <div class="card">
+            <div class="card-body px-4 py-5">
+              <!-- Carousel wrapper -->
+              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <div class="carousel-indicators mb-0">
+                  <button data-mdb-target="#carouselDarkVariant" data-mdb-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button data-mdb-target="#carouselDarkVariant" data-mdb-slide-to="1"
+                    aria-label="Slide 1"></button>
+                  <button data-mdb-target="#carouselDarkVariant" data-mdb-slide-to="2"
+                    aria-label="Slide 1"></button>
+                </div>
+  
+                <!-- Inner -->
+                <div class="carousel-inner pb-5">
+                  <!-- Single item -->
+                  <div class="carousel-item active">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-lg-10 col-xl-8">
+                        <div class="row">
+                          <div class="col-lg-4 d-flex justify-content-center">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                              class="rounded-circle shadow-1 mb-4 mb-lg-0" alt="woman avatar" width="150"
+                              height="150" />
+                          </div>
+                          <div
+                            class="col-9 col-md-9 col-lg-7 col-xl-8 text-center text-lg-start mx-auto mx-lg-0">
+                            <h4 class="mb-4">Maria Smantha - Web Developer</h4>
+                            <p class="mb-0 pb-3">
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                              aliquam amet animi blanditiis consequatur debitis dicta
+                              distinctio, enim error eum iste libero modi nam natus
+                              perferendis possimus quasi sint sit tempora voluptatem. Est,
+                              exercitationem id ipsa ipsum laboriosam perferendis.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Single item -->
+                  <div class="carousel-item">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-lg-10 col-xl-8">
+                        <div class="row">
+                          <div class="col-lg-4 d-flex justify-content-center">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                              class="rounded-circle shadow-1 mb-4 mb-lg-0" alt="woman avatar" width="150"
+                              height="150" />
+                          </div>
+                          <div
+                            class="col-9 col-md-9 col-lg-7 col-xl-8 text-center text-lg-start mx-auto mx-lg-0">
+                            <h4 class="mb-4">Lisa Cudrow - Graphic Designer</h4>
+                            <p class="mb-0 pb-3">
+                              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                              accusantium doloremque laudantium, totam rem aperiam, eaque
+                              ipsa quae ab illo inventore veritatis et quasi architecto
+                              beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                              quia voluptas sit aspernatur.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Single item -->
+                  <div class="carousel-item">
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-lg-10 col-xl-8">
+                        <div class="row">
+                          <div class="col-lg-4 d-flex justify-content-center">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                              class="rounded-circle shadow-1 mb-4 mb-lg-0" alt="woman avatar" width="150"
+                              height="150" />
+                          </div>
+                          <div
+                            class="col-9 col-md-9 col-lg-7 col-xl-8 text-center text-lg-start mx-auto mx-lg-0">
+                            <h4 class="mb-4">John Smith - Marketing Specialist</h4>
+                            <p class="mb-0 pb-3">
+                              At vero eos et accusamus et iusto odio dignissimos qui
+                              blanditiis praesentium voluptatum deleniti atque corrupti quos
+                              dolores et quas molestias excepturi sint occaecati cupiditate
+                              non provident, similique sunt in culpa qui officia mollitia
+                              animi id laborum et dolorum fuga.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Inner -->
+  
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-mdb-target="#carouselDarkVariant"
+                  data-mdb-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-mdb-target="#carouselDarkVariant"
+                  data-mdb-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <!-- Carousel wrapper -->
+            </div>
+          </div>
+  
+          <div class="text-center mt-4 pt-2">
+            <i class="fas fa-quote-right fa-3x text-white"></i>
+          </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouseltestimonial" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouseltestimonial" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-  </div>
-
-
-
-
   </section>
-
   <section id="plan">
 
-    <div class="row">
+    <div class="row" style="margin-bottom:1rem">
       <div class="col-sm-6">
         <div class="card">
-          <div class="card-body">
-            <h5 class="card-tittle">patient signup</h5>
-            <p class="card-text">click the button bellow to join as patient</p>
-            <a href="/patient"><button class="btn btn-lg btn-block  btn-danger" type="button" name="button">signup</button></a>
+          <div class="card-body" style="padding-bottom:2rem;">
+            <h5 class="card-tittle" style="padding-top:4rem;">Patient signup</h5>
+
+            <a href="/patient"><button class="btn btn-lg btn-block  btn-danger" type="button"   name="button"><i class="fa-solid fa-user-plus"></i></i></button></a>
           </div>
         </div>
       </div>
       <div class="col-sm-6">
         <div class="card">
-          <div class="card-body">
-          <h5 class="card-tittle">volunteer signup</h5>
-            <p class="card-text">click the button below to join as a helping hand</p>
-            <a href="/doctor"><button class="btn btn-lg btn-block  btn-danger" type="button" name="button">signup</button></a>
+          <div class="card-body" style="padding-bottom:2rem;">
+          <h5 class="card-tittle" style="padding-top:4rem;"">Volunteer signup</h5>
+
+            <a href="/doctor"><button class="btn btn-lg btn-block  btn-danger" type="button" name="button" ><i class="fa-solid fa-user-plus"></i></button></a>
           </div>
         </div>
       </div>
@@ -385,14 +505,10 @@
 
 
   </section>
-
-
-  <!-- Remove the container if you want to extend the Footer to full width. -->
-
-  <!-- Footer -->
   <footer
           class="text-center text-lg-start text-white"
-          style="background-color: #45526e"
+          style="background-color: #911F27"
+          maxwidth=700000
           >
     <!-- Grid container -->
     <div class="container p-4 pb-0">
@@ -403,12 +519,10 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">
-              Company name
+              AARUNYA
             </h6>
             <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
+              Best care for you and your's
             </p>
           </div>
           <!-- Grid column -->
@@ -417,18 +531,18 @@
 
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <h6 class="text-uppercase mb-4 font-weight-bold">Services</h6>
             <p>
-              <a class="text-white">MDBootstrap</a>
+              <a class="text-white">Doctors</a>
             </p>
             <p>
-              <a class="text-white">MDWordPress</a>
+              <a class="text-white">Hospitals</a>
             </p>
             <p>
-              <a class="text-white">BrandFlow</a>
+              <a class="text-white">Transportation</a>
             </p>
             <p>
-              <a class="text-white">Bootstrap Angular</a>
+              <a class="text-white">Blog</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -441,16 +555,16 @@
               Useful links
             </h6>
             <p>
-              <a class="text-white">Your Account</a>
+              <a class="text-white">blog</a>
             </p>
             <p>
-              <a class="text-white">Become an Affiliate</a>
+              <a class="text-white">hospitals</a>
             </p>
             <p>
-              <a class="text-white">Shipping Rates</a>
+              <a class="text-white">transportation</a>
             </p>
             <p>
-              <a class="text-white">Help</a>
+              <a class="text-white">qna</a>
             </p>
           </div>
 
@@ -460,10 +574,10 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+            <p><i class="fas fa-home mr-3"></i> delhi</p>
             <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            <p><i class="fas fa-phone mr-3"></i> **4 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> *** 567 89</p>
           </div>
           <!-- Grid column -->
         </div>
@@ -481,8 +595,8 @@
             <!-- Copyright -->
             <div class="p-3">
               © 2020 Copyright:
-              <a class="text-white" href="https://mdbootstrap.com/"
-                 >MDBootstrap.com</a
+              <a class="text-white" href=""
+                 >Aarunya</a
                 >
             </div>
             <!-- Copyright -->
@@ -530,9 +644,7 @@
     </div>
     <!-- Grid container -->
   </footer>
-  <!-- Footer -->
-</div>
-<!-- End of .container -->
+
 
 
 
