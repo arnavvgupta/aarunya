@@ -19,9 +19,4 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('innerve_app.urls')),
-<<<<<<< HEAD
-    path('blog/', include("blog.urls")),
-=======
-    path('blog/',include('blog.urls'))
->>>>>>> 0bf3128 (final)
 ]

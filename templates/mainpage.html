@@ -1,786 +1,200 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  {%load static%}
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>patienthomepage</title>
-    <link rel="icon" href="{% static 'logo.png' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Freehand&family=Patrick+Hand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
+    {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>arrunya login</title>
 </head>
-<style>
-  body{
-    margin: 0;
-    font-family: 'Heebo', sans-serif;
-  
-  
-  }
-  .wave{
-    height: 4rem;
-    width: 4rem;
-  }
-  
-  .hero-content{
-    background-color: #FFF5E4;
-  }
-  .paid-content{
-    background-color: #FFE3E1;
-  }
-  .economic-content{
-    background-color: #FFF5E4;
-  }
-  .navbar-brand{
-    color: #EF7B7B;
-    font-size: 35px;
-    font-family: 'Caveat Bold 700 ', cursive;
-    padding-left:5rem;
-    font-weight:bolder;
-  
-  
-  
-  }
-  ul{
-    margin:5rem;
-    font-family: 'Patrick Hand', cursive;
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: bold;
-    color: #383838;
-  
-  }
-  .nav-item{font-family: 'Caveat SemiBold 600', cursive;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  height: 2rem;
-  font-weight: bolder;
-  }
-  
-  .hero-content button{
-    color: black;
-    font-weight: 400;
-    font-size: 16px;
-    height: 50px;
-    width: 220px;
-    line-height: 24px;
-    text-align: center;
-    background: #F96666;
-    border-radius: 25px;
-    border: none;
-    margin: 5rem;
-  }
-  
-  .paid-content button{
-    color: black;
-  
-    font-weight: 400;
-    font-size: 16px;
-    height: 50px;
-    width: 220px;
-    line-height: 24px;
-    text-align: center;
-    background: #F96666;
-    border-radius: 25px;
-    border: none;
-    margin: 5rem;
-  }
-  
-  
-  .hero-content h1{
-  margin-bottom: 2rem;
-  text-align: center;
-  padding-top: 4rem;
-  font-family: 'Freehand', cursive;
-  font-weight: bolder;
-  color: #F96666;
-  
-  }
-  .pin{
-    height: 2rem;
-    width: 2rem;
-  }
-  
-  
-  .paid-content h1{
-  margin-bottom: 2rem;
-  text-align: center;
-  padding-top: 4rem;
-  font-family: 'Freehand', cursive;
-  font-weight: bolder;
-  color: #F96666;
-  
-  
-  }
-  h4{
-    font-weight: bolder;
-    color: #F96666;
-    font-family: 'Patrick Hand', cursive;
-  }
-  
-  h1{font-weight: bolder;
-  color: #F96666;
-  font-family: 'Patrick Hand', cursive;
-  text-align: center;
-  background:#FFF5E4;
-  margin-bottom:0;
-  }
-  
-  
-  .hero-content p{
-    margin:5rem;
-    font-family: 'Patrick Hand', cursive;
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: bold;
-    color: #383838;
-  
-  
-    text-align: left;
-  }
-  
-  .paid-content p{
-    margin:5rem;
-    font-family: 'Patrick Hand', cursive;
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: bold;
-    color: #383838;
-    text-align: left;
-  }
- 
-  .content-table{
-    border-collapse: collapse;
-    margin: auto;
-    font-size: 0.9em;
-    min-width: 500px;
-  }
-  .content-table thead tr{
-    background-color: lightpink;
-    text-align: left; 
-    padding: 20px;
-    font-weight: bold;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-    box-shadow: 0 0 20px #F96666(0,0,0,1);
-  }
-  .content-table th,
-  .content-table td{
-    padding: 12px 15px;
-  }
-  .content-table tbody tr{
-    border-bottom: 1px solid lightgray;
-  }
-  
-  .content-table tbody tr:last-of-type{
-    border-bottom: 2px solid #EF7B7B;
-  }
-
-  .economic-content button{
-    color: black;
-  
-    font-weight: 400;
-    font-size: 16px;
-    height: 50px;
-    width: 220px;
-    line-height: 24px;
-    text-align: center;
-    background: #F96666;
-    border-radius: 25px;
-    border: none;
-    margin: 2rem;
-
-  }
-  
-  .content-table td img{
-    height: 200px;
-    width: 400px;
-    border-radius: 10px 10px 10px 10px;
-    border: 2px solid red;
-
-
-  }
-</style>
 <body>
-
-  <nav class="navbar navbar-expand-lg  navbar-light navb">
-    <a class="navbar-brand" href="">AARUNYA</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <span class="navbar-text">
-            <h5> best care for you and your's</h5>
-        </span>
-        <ul class="navbar-nav ms-auto">
-
-            <li class="nav-item">
-                <a class=nav-link href="">contact</a>
-
-            </li>
-            <li class="nav-item">
-                <a class=nav-link href="/blog">Blog</a>
-
-            </li>
-            <li class="nav-item">
-                <a class=nav-link href="">log Out</a>
-
-            </li>
-        </ul>
-</nav>
-
-<header>
-    <h1>Hey Mansha <span><img
-                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/326/waving-hand_1f44b.png"
-                class="wave"></span></h1>
-</header>
-<div class="hero-content">
-
-    <div class="container">
-        <h1>Free Resources</h1>
-
-        <p>
-            Here are the best free resources for you!!!!
-        </p>
-
-
-
-        <h4><span> <img
-                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/307/pushpin_1f4cc.png"
-                    class="pin" </span>CARE India</h4>
-        <p>
-
-            has been working in India for a long time and is a non-benefit association zeroing in on
-
-
-            lessening neediness and social foul play.
-            Care India contacted 31.5 million individuals straightforwardly through 43 activities in 14 states,
-            covering in excess of 90 locale. It is a piece of CARE International Confederation, which works in 95
-            nations around the world, where all
-            individuals live with respect and security.
-
-        <ul>
-            <li> Address – Module No. 411, 4th Floor, NSIC-MDBP Building, Okhla Industrial Estate, New Delhi –
-                110020 (INDIA)</li>
-            <li> Phone no – 011-69200000</li>
-            <li>• Email – contactus@careindia.org</li>
-        </ul>
-
-
-        </p>
-
-
-        <h4> <span> <img
-                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/307/pushpin_1f4cc.png"
-                    class="pin" </span>Smile Foundation</h4>
-        <p>was started in 2002, with the aim to bring positive changes to the lives of
-            underprivileged children, their families, and their communities. It works at the grassroot level, aiming
-            to solve the root cause of the problems that the rural people face.
-            More than 10 lakh people have benefitted from the from the free healthcare services from the ‘Smile on
-            Wheels’ programme so far.
-        <ul>
-            <li>161 B/4, 3rd Floor, Gulmohar House Yusuf Sarai Community Centre New Delhi-110049</li>
-            <li> Phone : +91-11-43123700</li>
-            <li>• Email – contactus@careindia.org</li>
-        </ul>
-        </p>
-
-        <h4><span> <img
-                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/307/pushpin_1f4cc.png"
-                    class="pin" </span>Seva Mandir</h4>
-        <p>helps meet the most critical and unmet healthcare needs in the rural villages around
-            Udaipur. It works within 152 villages and impacts more than 8000 lives yearly.
-        <ul>
-            <li>Seva Mandir
-                Old Fatehpura, Udaipur
-                Rajasthan, India 313004</li>
-
-            <li>• Email – info@sevamandir.org</li>
-        </ul>
-
-
-
-
-
-        <h4> <span> <img
-                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/307/pushpin_1f4cc.png"
-                    class="pin" </span>Merrygold Health Network</h4>
-        <p>It is based on Public Private Partnership (PPP) model that offers quality
-            Maternal & Child Healthcare and Family Planning Services at affordable rates. It’s a three-tier network,
-            comprising L1 Hospitals (with PG doctors, minimum 20 beds), L2 Hospitals/Clinics (with MBBS doctors, min
-            5 beds), and Merrytarang
-            Members or L3 (community health volunteers who spread awareness on reproductive healthcare & eventually
-            link community members with L1/L2).
-        <ul>
-            <li> B-14A, IInd Floor, Sector-62,
-                Gautam Budh Nagar,Noida,
-                Uttar Pradesh – 201307</li>
-
-            <li>• Email – • info@hlfppt.org</li>
-        </ul>
-
-
-        </p>
-
-        <h4><span> <img
-                    src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/307/pushpin_1f4cc.png"
-                    class="pin" </span>Pradhan Mantri Surakshit Matritva Abhiyan</h4>
-        <p>This newly-launched government scheme has given a boost
-            to HLFPPT in promoting HIV screening among expectant mothers under Prject AHANA.
-        </p>
-        <p>
-
-
-            SMS PMSMA space your name at
-            5616115
-
-            Toll free Number
-            1800-180-1104
-        </p>
-
-        
-
-    </div>
-
-
-
-
-</div>
-
-<div class="paid-content">
-    <div class="container">
-
-        <h1>Free resources</h1>
-
-
-        <div class="economic-content">
-            <div class="container">
-
-
-                <table class="content-table">
-                    <thead>
-                        <tr>
-                            <th> S.No </th>
-                            <th> Government hospitals</th>
-                            <th> Address</th>
-                            <th> Contact</th>
-                            <th> Route </th>
-
-
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td> 1 </td>
-                            <td> AIIMS </td>
-                            <td> Ansari Nagar, New Delhi – 110029 </td>
-                            <td> +91-11-26864851</td>
-                            <td>
-                                <img src="{% static 'aiims.jpg' %}" alt="">
-                                <div>
-
-                                    <a href="https://www.google.co.in/maps/dir//All+India+Institute+Of+Medical+Sciences,+Sri+Aurobindo+Marg,+Ansari+Nagar,+Ansari+Nagar+East,+New+Delhi,+Delhi+110029/@28.5671729,77.1750255,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390ce26f903969d7:0x8367180c6de2ecc2!2m2!1d77.2100451!2d28.5671774!3e0"
-                                        target="_blank">Directions</a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td> 2 </td>
-                            <td> BARA HINDU RAO </td>
-                            <td> Kishan ganj new delhi</td>
-                            <td> +91-11-23919738</td>
-                            <td>
-                                <img src="{% static 'bara.jpeg' %}" alt="">
-                                <div>
-
-                                    <a href="https://www.google.co.in/maps/dir//Bara+Hindu+Rao,+Kishan+Ganj,+New+Delhi,+Delhi/@28.6613529,77.167411,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390cfd7bccd0f273:0xf4c261ca528efb5e!2m2!1d77.2024306!2d28.6613574!3e0"
-                                        target="_blank">Directions</a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td> 3 </td>
-                            <td> DEEN DAYAL UPHADAYA </td>
-                            <td> Shaheed mangal </td>
-                            <td> +91-11-25400336</td>
-                            <td>
-                                <img src="{% static 'deen.png' %}" alt="">
-                                <div>
-
-                                    <a href="https://www.google.co.in/maps/dir//Deen+Dayal+Upadhyay+Hospital,+Shaheed+Mangal+Pandey+Marg,+Nanak+Pura,+Hari+Nagar,+New+Delhi,+Delhi/@28.6280598,77.0772773,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390cfd309eebed77:0xc8559980f0b50535!2m2!1d77.1122969!2d28.6280643!3e0"
-                                        target="_blank">Directions</a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td> 4 </td>
-                            <td> MAHRAJA AGRASAN </td>
-                            <td> Punjabi bagh, New Delhi </td>
-                            <td> +91-11-25121645</td>
-                            <td>
-                                <img src="{% static 'mahaa.jpg' %}" alt="">
-                                <div>
-
-                                    <a href="https://www.google.co.in/maps/dir//Maharaja+Agrasen+Hospital+Blood+Bank,+Block+C,+Shivaji+Park,+Punjabi+Bagh,+Delhi/@28.673893,77.0987226,13.01z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390d03bb20f9f051:0xea5b20b956a48d4!2m2!1d77.1340136!2d28.6740445!3e0"
-                                        target="_blank">Directions</a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td> 5 </td>
-                            <td> GANGA RAM HOSPITAL </td>
-                            <td> Pusa road </td>
-                            <td> +91-11-25712389</td>
-                            <td>
-                                <img src="{% static 'th.jpeg' %}" alt="">
-                                <div>
-
-                                    <a href="https://www.google.co.in/maps/dir//Sir+Ganga+Ram+Hospital,+Sir+Ganga+Ram+Hospital+Marg,+Old+Rajinder+Nagar,+New+Rajinder+Nagar,+New+Delhi,+Delhi/@28.5866671,77.2160457,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390d02a17c4ab835:0xecd838535c0fa0f6!2m2!1d77.1895572!2d28.6384547!3e0!5m1!1e1"
-                                        target="_blank">Directions</a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td> 6 </td>
-                            <td> META CHANAN DEVI </td>
-                            <td> Janak puri </td>
-                            <td> +91-11-25554487</td>
-                            <td>
-                                <img src="{% static 'mataa.jpeg' %}" alt="">
-                                <div>
-
-                                    <a href="https://www.google.co.in/maps/dir//meta+chanan+dev+delhi/@28.5983404,77.0853979,11.99z/data=!4m2!4m1!3e0!5m1!1e1"
-                                        target="_blank">Directions</a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td> 7 </td>
-
-                            <td> LNJP </td>
-                            <td> Delhi gate </td>
-                            <td> +91-11-23233400</td>
-                            <td>
-                                <img src="{% static 'lnjp.jpeg' %}" alt="">
-                                <div>
-
-                                    <a href="https://www.google.co.in/maps/dir//Lnjp+Hospital,+Jawaharlal+Nehru+Marg,+near+Delhi+Gate,+LNJP+Colony,+New+Delhi,+Delhi/@28.6382621,77.2035741,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390cfd27b3316b6d:0xa9d62fda6be69577!2m2!1d77.2385937!2d28.6382666!3e0!5m1!1e1"
-                                        target="_blank">Directions</a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td> 8 </td>
-                            <td> RAM MANOHAR LOHIA </td>
-                            <td> Central Secretariat </td>
-                            <td> +91-11-23365525</td>
-                            <td>
-                                <img src="{% static 'ram.jpeg' %}" alt="">
-                                <div>
-
-                                    <a href="https://www.google.co.in/maps/dir//ram+maonhar+lohia+Hospital/@28.6259296,77.1659187,13z/data=!4m2!4m1!3e0!5m1!1e1"
-                                        target="_blank">Directions</a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td> 9 </td>
-                            <td> MOOLCHAND </td>
-                            <td> Lajpat nagar</td>
-                            <td> +91-11-26832461</td>
-                            <td>
-
-
-                                <img src="{% static 'moolchand.jpeg' %}" alt="">
-                                <div>
-
-                                    <a href="https://www.google.co.in/maps/dir//Moolchand+Hospital,+Moolchand+Flyover,+Block+M,+Lajpat+Nagar+IV,+Defence+Colony,+New+Delhi,+Delhi/@28.5604191,77.2261349,14.17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390ce3c849a0fecd:0x309c4e9de4e2aff3!2m2!1d77.2350582!2d28.5663845!3e0!5m1!1e1"
-                                        target="_blank">Directions</a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td> 10 </td>
-                            <td> MAX MEDICENTRE </td>
-                            <td> Lajpat nagar </td>
-                            <td> +91-11-27158844</td>
-                            <td>
-
-
-                                <img src="{% static 'max.jpeg' %}">
-                        <div>
-
-                            <a href="
-                                    https://www.google.co.in/maps/dir//Max+Medcentre,+Lajpat+Nagar,+Ring+Road,+Vikram+Vihar,+Lajpat+Nagar+IV,+Lajpat+Nagar,+New+Delhi,+Delhi/@28.5645408,77.2049625,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390ce30abd803a17:0xb3a947e1e5d4d015!2m2!1d77.2400158!2d28.5645848!3e0!5m1!1e1"
-                                    target="_blank">Directions</a>
-            </div>
-            </td>
-
-            </tr>
-
-            </tbody>
-            </table>
-
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+          }
+          body {
+            background: url(' {% load static %}') no-repeat center;
+            background-size: cover;
+            font-family: sans-serif;
+          }
+          .login-wrapper {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background:#FFF5E4;
+          }
+          .form {
+            position: relative;
+            width: 100%;
+            max-width: 380px;
+            padding: 80px 40px 40px;
+            background: #EF7B7B;
+            border-radius: 10px;
+            color: #fff;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+          }
+          .form::before {
+            content:'';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background: rgba(255,255,255, 0.08);
+            transform: skewX(-26deg);
+            transform-origin: bottom left;
+            border-radius: 10px;
+            pointer-events: none;
+          }
+          .form img {
+            position: absolute;
+            top: -50px;
+            left: calc(50% - 50px);
+            width: 100px;
+            background: rgba(255,255,255, 0.8);
+            border-radius: 50%;
+          }
+          .form h2 {
+            text-align: center;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            color: #FFCC99;
+          }
+          .form .input-group {
+            position: relative;
+          }
+          .form .input-group input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background-color: transparent;
+            color: inherit;
+          }
+          .form .input-group label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 1rem;
+            pointer-events: none;
+            transition: .3s ease-out;
+          }
+          .form .input-group input:focus + label,
+          .form .input-group input:valid + label {
+            transform: translateY(-18px);
+            color: #ff652f;
+            font-size: .8rem;
+          }
+          .submit-btn {
+            display: block;
+            margin-left: auto;
+            border: none;
+            outline: none;
+            background: #FFCC99;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          .forgot-pw {
+            color: inherit;
+          }
+          
+          #forgot-pw {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            z-index: 1;
+            background: #fff;
+            opacity: 0;
+            transition: 0.6s;
+          }
+          #forgot-pw:target {
+            height: 100%;
+            opacity: 1;
+          }
+          .close {
+            position: absolute;
+            right: 1.5rem;
+            top: 0.5rem;
+            font-size: 2rem;
+            font-weight: 900;
+            text-decoration: none;
+            color: inherit;
+          }
+
+
+          .para{
+            color: black;
+            margin: 10px;
+
+          }
+          .signup{
+            left: 10px;
+           margin-right: 100px;
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
             
 
-
-
-        </div>
-
-        <h1> Paid resources</h1>
-
-        <div class="economic-content">
-            <div class="container">
-
-
-                <table class="content-table">
-                    <thead>
-                        <tr>
-                            <th> S.No </th>
-                            <th> Private hospitals</th>
-                            <th> Address</th>
-                            <th> Contact</th>
-                            <th> Route </th>
-
-
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td> 1 </td>
-                            <td> Fortis </td>
-                            <td> Shalimar bagh </td>
-                            <td> 011 4530 2222</td>
-                            <td>
-                                <img src="{% static 'fortis.jpeg' %}" alt="">
-                                <div>
-
-                                    <a href="https://www.google.co.in/maps/dir//Fortis+Hospital,+Shalimar+Bagh,+Shaheed+Udham+Singh+Marg,+AA+Block,+Poorbi+Shalimar+Bag,+Shalimar+Bagh,+Delhi/@28.7095523,77.1348934,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390d02206e9e71cf:0xb096542618cd68b4!2m2!1d77.169913!2d28.7095568!3e0" target="_blank">Directions</a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td> 2 </td>
-                            <td> Appolo </td>
-                            <td> Patel nagar </td>
-                            <td> 011 2692 5858 </td>
-                            <td>
-                                <img src="{% static 'apollo.jpeg' %}" alt="">
-                                <div>
-
-                                    <a href="https://www.google.co.in/maps/dir//Apollo+Cradle+Maternity+%26+Children's+Hospital+in+Moti+Nagar,+New+Delhi,+Najafgarh+Road,+Moti+Nagar,+Karampura+Industrial+Area,+Moti+Nagar,+New+Delhi,+Delhi/@28.6618034,77.1152288,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390d02ffe78feaf3:0x6e3660d48561b023!2m2!1d77.1502484!2d28.6618079!3e0" target="_blank">Directions</a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td> 3 </td>
-                            <td> citizen hospital </td>
-                            <td> Ashok vihar </td>
-                            <td> 011 4200 0000 </td>
-                            <td>
-                                <img src="{% static 'citizen.jpeg' %}" alt="">
-                                <div>
-
-                                    <a href="https://www.google.co.in/maps/dir//Citizen+Hospital+-+Best+Maternity+Hospital+in+Ashok+%7C+Best+Gynaecologist+in+Delhi+%7C+Vihar,+Pocket+B+2,+Phase+2,+Ashok+Vihar,+Delhi/@28.6923107,77.1423772,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390d02138a403db1:0xb0f755867c69dfb5!2m2!1d77.1773968!2d28.6923152!3e0" target="_blank">Directions</a>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td> 4 </td>
-                            <td> Shyama hospital</td>
-                            <td> Palam </td>
-                            <td> 011 2651 5050</td>
-                            <td>
-                                <img src="{% static 'shyama.jpeg' %}" alt="">
-                                <div>
-
-                                    <a href="https://www.google.co.in/maps/dir//Shyama+Hospital-+Best+Gynaecologist+Hospital+In+Palam+%7C+Best+Maternity+Hospital+In+Palam,+Kali+Bari+Road,+Kali+Nagar,+Block+B+2,+Mahavir+Enclave+Part+1,+Mahavir+Enclave,+New+Delhi,+Delhi/@28.59624,77.0435635,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390d1b387b5d0dfd:0x2559121b620a7383!2m2!1d77.0785831!2d28.5962445!3e0" target="_blank">Directions</a>
-                                </div>
-                            </td>
-
-                        </tr>
+          }
+          .signup1{
+            margin-right: 90px;
+          }
 
 
 
 
-                    </tbody>
-                </table>
-
-                
 
 
 
+
+
+
+    </style>
+    <div class="login-wrapper">  
+        <form action="" class="form" method="POST">
+          {% csrf_token %}
+          <img src="{% static 'mombaby.png' %}" alt="">
+          <div class="text"  >
+            {% for message in messages  %}            
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                  <strong>Message : </strong> {{ message }}
+    
+  
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
+            {% endfor %}  
+          </div>
+      <h2>PATIENT NAME</h2>
+      <p class="para"> Please select which category do you want to go for</p>
+      <div class="signup">
+      <a href="/free"><button  type="button" value=" Free resources" class="submit-btn">
+      </div>
+      <div class="signup1">
+        <a href="/paid"><button  type="button" value=" Free resources" class="submit-btn">
+      </div>
+      
+      
+    </form>
 
-
-
-            <h1> Paid doctors</h1>
-
-                <div class="economic-content">
-                    <div class="container">
-
-
-                        <table class="content-table">
-                            <thead>
-                                <tr>
-                                    <th> S.No </th>
-                                    <th> Name </th>
-                                    <th> Fees </th>
-                                    <th> Contact</th>
-
-
-
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td> 1 </td>
-                                    <td> ramesh </td>
-                                    <td> 500 </td>
-                                    <td> 7878787878</td>
-
-
-                                </tr>
-                                <tr>
-                                    <td> 2 </td>
-                                    <td> mukesh </td>
-                                    <td> 400</td>
-                                    <td> 9999888887</td>
-
-                                </tr>
-                                <tr>
-                                    <td> 3 </td>
-                                    <td> mudit </td>
-                                    <td> 800 </td>
-                                    <td> 2345623456 </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td> 4 </td>
-                                    <td> dhruv </td>
-                                    <td> 200 </td>
-                                    <td> 9876543210</td>
-
-
-                                </tr>
-
-
-
-
-                            </tbody>
-                        </table>
-
-
-
-
-
-                    </div>
-
-
-                    <h1> Free doctors</h1>
-
-                    <div class="economic-content">
-                        <div class="container">
-
-
-                            <table class="content-table">
-                                <thead>
-                                    <tr>
-                                        <th> S.No </th>
-                                        <th> Name </th>
-                                        <th> Fees </th>
-                                        <th> Contact</th>
-
-
-
-                                    </tr>
-                                </thead>
-
-                                <tbody>                                    
-                                    <tr>
-                                        <td> 1 </td>
-                                        <td> prajwal</td>
-                                        <td> 0 </td>
-                                        <td> 9998887776</td>
-                                        
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td> 2 </td>
-                                        <td> arnav </td>
-                                        <td> 0</td>
-                                        <td> 9999988888</td>
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td> 3 </td>
-                                        <td> mansha </td>
-                                        <td> 0 </td>
-                                        <td> 8888666677</td>
-                                        
-                                        
-                                    </tr>
-                                    <tr>
-                                        <td> 4 </td>
-                                        <td> nitika </td>
-                                        <td> 0 </td>
-                                        <td> 1234567890</td>
-                                        
-                                        
-                                    </tr>
-                                {% for d in doc %}
-                                    <tr>
-                                        <td> 5 </td>
-                                        <td> {{d.dname}} </td>
-                                        <td> 0 </td>
-                                        <td> {{d.phone}}</td>
-                                    </tr>
-                                {% endfor %}
-                                    
-                                    
-                                    
-                                    
-                                </tbody>
-                            </table>
-
-                            <button>signup</button>
-
-                        </div>
-
-                        <script>
-                            (function(d, m){
-                            var kommunicateSettings = 
-                                {"appId":"38be5562a44621101baa09b3c3296fe5e","popupWidget":true,"automaticChatOpenOnNavigation":true};
-                            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
-                            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-                            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
-                            window.kommunicate = m; m._globals = kommunicateSettings;
-                        })(document, window.kommunicate || {});
-                        </script> 
 </body>
-
 </html>
