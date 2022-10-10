@@ -13,6 +13,7 @@ urlpatterns = [
     path('bot',views.bot,name="bot"),
     path('logindoc',views.logindoc,name="logindoc"),
     path('mainpage',views.login,name="mainpage"),
-    path('mainpagedoc',views.logindoc,name="mainpagedoc")
+    path('mainpagedoc',views.logindoc,name="mainpagedoc"),
+    path('ambulance',views.ambulance,name="ambulance")
 
 ]

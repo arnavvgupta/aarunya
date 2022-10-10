@@ -91,5 +91,7 @@ def mainpage(request):
 def mainpagedoc(request):
     return render(request,"mainpagedoc.html")
 
-
+def ambulance(request):
+    
+    return render(request,"ambulance.html")
     

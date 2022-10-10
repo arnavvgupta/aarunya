@@ -72,7 +72,7 @@ TEMPLATES = [
 
 
 WSGI_APPLICATION = 'innerve.wsgi.application'
-INSTALLED_APPS += ['import_export']
+# INSTALLED_APPS += ['import_export']
 
 
 # Database
