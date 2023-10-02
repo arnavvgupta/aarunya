@@ -10,13 +10,15 @@
     {% csrf_token %}
     <title>{% block title%} {% endblock %}</title>
      <style>
-      {% block css %} {% endblock %}
+      {% block css %} 
+      
+      {% endblock %}
   </style>
    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
   </head>
-  <body>
+  <body style="background:#FFF5E4">
   
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <nav class="navbar navbar-expand-lg navbar-dark" style="background:#911F27">
   <a class="navbar-brand" href="/shop">Aarunya</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -24,33 +26,26 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/shop">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item ">
+        <a class="nav-link" href="/first">Home </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/shop/about">About Us</a>
-      </li>
+      
 
-      <li class="nav-item">
-        <a class="nav-link" href="/blog">Blog</a>
-    </li>
+    
     <li class="nav-item">
       <a class="nav-link" href="/ambulance">Ambulance</a>
   </li>
       <li class="nav-item">
-        <a class="nav-link" href="/shop/contact">Contact Us</a>
+        <a class="nav-link" href="/login">login</a>
       </li>
      
 
 
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+   
     </form>
   
   </div>
-</nav>
+</nav style="background-color:#911F27">
   {% block body %} {% endblock %}
 
     <!-- Optional JavaScript -->

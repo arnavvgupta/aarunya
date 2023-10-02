@@ -1,7 +1,7 @@
 {% extends 'blog/basic.html' %}
 {% load static%}
 {% block body %}
-<div class="container">
+<div class="container" >
    <br> <h2>Support for parents</h2><br>
 
 <div class="row my-2">
@@ -39,8 +39,9 @@
         You can share parenting experiences, tips and tricks, talk about issues, and make new friends. You can have a coffee or tea, and chat online with Q&A. From time to time, we’ll have upcoming social events posted on our website, forum and social platforms for all parents.
         
      </p>
-     <button class="btn btn-success my-2 my-sm-0"
-     text-align="center" type="submit">Join Forum</button><br>
-    </div>        
+    </div>  
+    <div class="buttonpri">
+        <a href="/forum"><button type="button" class="btn btn-outline-light  btn-danger btn-lg">Join Forum</button></a>
+      </div>      
     
     {% endblock %}

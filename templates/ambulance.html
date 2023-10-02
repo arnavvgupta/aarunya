@@ -1,208 +1,362 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" dir="ltr">
+  <!-- {%load static%} -->
 <head>
-    <title>Contact us</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html,
-        body {
-            min-height: 100vh;
-            padding: 0;
-            margin: 0;
-            font-family: Roboto, Arial, sans-serif;
-            font-size: 14px;
-            color: #666;
-        }
-
-        input,
-        textarea {
-            outline: none;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            background: #FDF6F0;
-        }
-
-        h1 {
-            margin-top: 0;
-            font-weight: 500;
-        }
-
-        form {
-            position: relative;
-            width: 80%;
-            border-radius: 30px;
-            background: #fff;
-        }
-
-        .form-left-decoration,
-        .form-right-decoration {
-            content: "";
-            position: absolute;
-            width: 50px;
-            height: 20px;
-            border-radius: 20px;
-            background: #EF7B7B;
-        }
-
-        .form-left-decoration {
-            bottom: 60px;
-            left: -30px;
-        }
-
-        .form-right-decoration {
-            top: 60px;
-            right: -30px;
-        }
-
-        .form-left-decoration:before,
-        .form-left-decoration:after,
-        .form-right-decoration:before,
-        .form-right-decoration:after {
-            content: "";
-            position: absolute;
-            width: 50px;
-            height: 20px;
-            border-radius: 30px;
-            background: #fff;
-        }
-
-        .form-left-decoration:before {
-            top: -20px;
-        }
-
-        .form-left-decoration:after {
-            top: 20px;
-            left: 10px;
-        }
-
-        .form-right-decoration:before {
-            top: -20px;
-            right: 0;
-        }
-
-        .form-right-decoration:after {
-            top: 20px;
-            right: 10px;
-        }
-
-        .circle {
-            position: absolute;
-            bottom: 80px;
-            left: -55px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: #fff;
-        }
-
-        .form-inner {
-            padding: 20px;
-        }
-
-        .form-inner input,
-        .form-inner textarea {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 20px;
-            background: #d0dfe8;
-        }
-
-        .form-inner textarea {
-            resize: none;
-        }
-
-        button {
-            width: 100px;
-            align-items: center;
-            padding: 10px;
-            margin-left: 350px;
-            border-radius: 20px;
-            border: none;
-            border-bottom: 4px solid #EF7B7B;
-            background: #EF7B7B;
-            font-size: 16px;
-            font-weight: 400;
-            color: #fff;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #EF7B7C;
-        }
-
-        @media (min-width: 568px) {
-            form {
-                width: 60%;
-            }
-        }
-        #SelectCategory{
-          display: block;
-            width: 25%;
-            padding: 15px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 50%;
-            background: #d0dfe8;
-            height: 50px;
-
-        }
-
-        #type{
-          display: block;
-            width: 25%;
-            padding: 15px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            border: none;
-            border-radius: 30px;
-            background: #d0dfe8;
-            height: 50px;
-
-        }
-    </style>
+    <meta charset="utf-8">
+    <title>patienthomepage</title>
+    <link rel="icon" href="{% static 'logo.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freehand&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
 </head>
-
-<body>
-    <form action="/" class="decor">
-        <div class="form-left-decoration"></div>
-        <div class="form-right-decoration"></div>
-        <div class="circle"></div>
-        <div class="form-inner">
-            <h1>FORM FOR AMBULANCE</h1>
-            <input type="text" placeholder="Patients name">
-            <input type="text" name="" placeholder=" Enter your address here">
-            <input type="text" name="" placeholder=" Landmarks near your place">
-            <input type="text" name="" placeholder=" Enter your phone no. here here">
-            <input type="text" name="" placeholder=" Enter your date of birth here">
-            <label for="TYPE OF AMBULANCE ">TYPE OF AMBULANCE </label>
-            
-            <select id="type">
-
-                <option value="TYPE OF AMBULANCE "> TYPE OF AMBULANCE </option>
-                <option value="mbbs"> With oxygen </option>
-                <option value="mbbs"> Witout oxygen </option>
-            </select>
+<style>
+  body{
+    margin: 0;
+    padding: 0px;
+    font-family: 'Heebo', sans-serif;
+    background-color: #FFE3E1;
 
 
+  }
+  .wave{
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .hero-content{
+    background-color: #FFF5E4;
+  }
+  .paid-content{
+    background-color: #FFE3E1;
+  }
+  .economic-content{
+    background-color: #FFF5E4;
+  }
+  .navbar{
+    background-color:#911F27;
+
+  }
+
+  .navbar-brand{
+    color: ##EF7B7B;
+    font-size: 28px;
+    font-family: 'Caveat Bold 700 ', cursive;
+    padding-left:1rem;
+    font-weight: bolder;
+
+  }
+  .nav-item{font-family: 'Caveat SemiBold 600', cursive;
+  padding-left: 1rem;
+  height: 1rem;
+  font-weight: bolder;
+  }
 
 
-            <button type="submit" href="/">Submit</button>
-        </div>
-    </form>
+  
+  ul{
+    margin:1rem;
+    padding-bottom: 1rem;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #383838;
 
-</body>
+  }
 
-</html>
+
+  .hero-content button{
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+    height: 50px;
+    width: 220px;
+    line-height: 24px;
+    text-align: center;
+    background: #F96666;
+    border-radius: 25px;
+    border: none;
+    margin: 5rem;
+  }
+
+  .paid-content button{
+    color: black;
+
+    font-weight: 400;
+    font-size: 16px;
+    height: 50px;
+    width: 220px;
+    line-height: 24px;
+    text-align: center;
+    background: #F96666;
+    border-radius: 25px;
+    border: none;
+    margin: 5rem;
+  }
+
+
+  .hero-content h1{
+  margin-bottom: 2rem;
+  text-align: center;
+  padding-top: 4rem;
+  font-family: 'Freehand', cursive;
+  font-weight: bolder;
+  color: #F96666;
+
+  }
+  .pin{
+    height: 2rem;
+    width: 2rem;
+  }
+
+
+  .paid-content h1{
+  margin-bottom: 2rem;
+  text-align: center;
+  padding-top: 4rem;
+  font-family: 'Freehand', cursive;
+  font-weight: bolder;
+  color: #F96666;
+
+
+  }
+  h4{
+    font-weight: bolder;
+    color: #F96666;
+    font-family: 'Patrick Hand', cursive;
+  }
+
+  h1{font-weight: bolder;
+  color: #F96666;
+  font-family: 'Patrick Hand', cursive;
+  text-align: center;
+  background: #FFF5E4;
+  margin-bottom:2rem;
+  margin-top: 2rem;
+  }
+
+
+  .hero-content p{
+    margin:5rem;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #383838;
+
+
+    text-align: left;
+  }
+
+  .paid-content p{
+    margin:5rem;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    color: #383838;
+    text-align: left;
+  }
+
+  .content-table{
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 0.9em;
+    min-width: 500px;
+  }
+  .content-table thead tr{
+    background-color: lightpink;
+    text-align: left;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px #F96666(0,0,0,1);
+  }
+  .content-table th,
+  .content-table td{
+    padding: 12px 15px;
+  }
+  .content-table tbody tr{
+    border-bottom: 1px solid lightgray;
+  }
+  .content-table tbody td{
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .content-table tbody tr:last-of-type{
+    border-bottom: 2px solid #EF7B7B;
+  }
+
+  .economic-content button{
+    color: black;
+
+    font-weight: 400;
+    font-size: 16px;
+    height: 50px;
+    width: 220px;
+    line-height: 24px;
+    text-align: center;
+    background: #F96666;
+    border-radius: 25px;
+    border: none;
+    margin: 2rem;
+
+  }
+
+  .content-table td img{
+    height: 200px;
+    width: 400px;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px solid red;
+
+
+  }
+</style>
+<section id="tittle">
+  <nav class="navbar navbar-expand-lg  navbar-dark navb">
+
+        <a class="navbar-brand" href="">AARUNYA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <span class="navbar-text">
+            <h5> best care for you and your's</h5>
+          </span>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class=nav-link href="">Contact</a>
+
+            </li>
+            <li class="nav-item">
+              <a class=nav-link href="/logindoc">Doctor Login</a>
+
+            </li>
+            <li class="nav-item">
+              <a class=nav-link href="/login">Login</a>
+
+            </li>
+          </ul>
+      </nav>
+
+      
+
+
+
+       
+
+
+
+        <h1> List of ambulance</h1>
+
+                  <div class="economic-content" style="padding-bottom:4rem;">
+                      <div class="container">
+
+
+                          <table class="content-table">
+                              <thead>
+                                  <tr>
+                                      <th> S.No </th>
+                                      <th> Name of service </th>
+                                      <th> Phone number </th>
+                                      <th> Area and other details</th>
+
+
+
+                                  </tr>
+                              </thead>
+
+                              <tbody>
+                                  <tr>
+                                      <td> 1 </td>
+                                      <td>Vinod/Ankit Ambulance</td>
+                                      <td> 8368962360 </td>
+                                      <td> Delhi NCR</td>
+
+
+                                  </tr>
+
+                                  <tr>
+                                      <td> 2 </td>
+                                      <td> Medulance</td>
+                                      <td> 9818423830 </td>
+                                      <td> Oxygen Available - Pan India</td>
+
+
+                                  </tr>
+                                  <tr>
+                                      <td> 3 </td>
+                                      <td>Delhi Sarkar Ambulance </td>
+                                      <td> 8708397904 </td>
+                                      <td> Oxygen Ambulance - Delhi NCR</td>
+
+
+                                  </tr>
+                                  <tr>
+                                      <td> 4 </td>
+                                      <td>Royal Life Ambulance </td>
+                                      <td> 9873529554</td>
+                                      <td> Oxygen Available - Delhi NCR </td>
+                                    </td>
+
+
+                                  </tr>
+                                  <tr>
+                                      <td> 5 </td>
+                                      <td> Kamal Ambluance (Mr. Ravi)
+                                    </td>
+                                      <td> 9667412360</td>
+                                      <td> Oxygen Not Available - Delhi </td>
+
+
+                                  </tr>
+                                  <tr>
+                                      <td> 6 </td>
+                                      <td> Jyoti Ambulance</td>
+                                      <td> 9871809086 </td>
+                                      <td> Oxygen Available - Delhi NCR
+                                    </td>
+
+
+                                  </tr>
+                                  <tr>
+                                      <td> 7 </td>
+                                      <td> City Ambulance </td>
+                                      <td> 9810763456</td>
+                                      <td> Oxygen Ambulance - Delhi NCR</td>
+
+
+                                  </tr>
+                                  <tr>
+                                      <td> 8 </td>
+                                      <td> Rajinder Ambulance</td>
+                                      <td> 7838987252 </td>
+                                      <td> Oxygen Ambulance - Delhi NCR</td>
+
+
+                                  </tr>
+                                  <tr>
+                                      <td> 9 </td>
+                                      <td> Rana Ambulance
+                                    </td>
+                                      <td> 9953591650</td>
+                                      <td> Oxygen Ambulance - Delhi NCR</td>
+
+
+                                 
+
+
+
+
+                              </tbody>
+                          </table>

@@ -14,6 +14,11 @@ urlpatterns = [
     path('logindoc',views.logindoc,name="logindoc"),
     path('mainpage',views.login,name="mainpage"),
     path('mainpagedoc',views.logindoc,name="mainpagedoc"),
-    path('ambulance',views.ambulance,name="ambulance")
+    path('ambulance',views.ambulance,name="ambulance"),
+    path('first',views.first,name="first"),
+    path('ambulance2',views.ambulance2,name="ambulance2"),
+    path('donation',views.donation,name="donation"),
+    path("forum",views.forum,name="forum"),
+    path("thanks",views.thanks,name="thanks")
 
 ]

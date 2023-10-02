@@ -49,7 +49,7 @@ def doctor(request):
         doctor = Doctor(dname=dname, email=email, password=password,dob=dob, phone=phone,profile=profile,qualification=qualification,fee=fee,category=category)
         doctor.save()
         messages.success(request, " You have been registered!")
-        return redirect('login')
+        return redirect('logindoc')
     return render(request,'doctor.html')
 
 def free(request):
@@ -90,8 +90,18 @@ def mainpage(request):
     return render(request,'mainpage.html',context)
 def mainpagedoc(request):
     return render(request,"mainpagedoc.html")
-
 def ambulance(request):
-    
     return render(request,"ambulance.html")
+def first(request):
+    return render(request,"first.html")
+def ambulance2(request):
+    return render(request,"ambulance2.html")
+def donation(request):
+    return render(request,"donation.html")
+def forum(request):
+    return render(request,'forum.html')
+def thanks(request):
+    return render(request,'thanks.html')
+
+
     

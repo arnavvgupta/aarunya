@@ -70,12 +70,13 @@
           .form .input-group input {
             width: 100%;
             padding: 10px 0;
+            font-size: 1rem;
             letter-spacing: 1px;
             margin-bottom: 30px;
             border: none;
             border-bottom: 1px solid #fff;
             outline: none;
-            background-color: transparent;s
+            background-color: transparent;
             color: inherit;
           }
           .form .input-group label {
@@ -137,63 +138,41 @@
             text-decoration: none;
             color: inherit;
           }
-
-
-          .para{
-            color: black;
-            margin: 10px;
-
-          }
-          .signup{
-            left: 10px;
-           margin-right: 100px;
-            padding: 10px;
-            text-align: center;
-            box-sizing: border-box;
-            
-
-          }
-          .signup1{
-            margin-right: 90px;
-          }
-
-
-
-
-
-
-
-
-
-
     </style>
-    <div class="login-wrapper">  
-        <form action="" class="form" method="POST">
-          {% csrf_token %}
-          <img src="{% static 'mombaby.png' %}" alt="">
-          <div class="text"  >
-            {% for message in messages  %}            
-            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-                  <strong>Message : </strong> {{ message }}
-    
-  
+  <div class="login-wrapper">  
+    <form action="" class="form" method="POST">
+      {% csrf_token %}
+      <img src="{% static 'a.webp' %}" alt="" style="height:100px">
+      <div class="text"  >
+        {% for message in messages  %}            
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+              <strong>Message : </strong> {{ message }}
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             {% endfor %}  
           </div>
-      <h2>PATIENT NAME</h2>
-      <p class="para"> Please select which category do you want to go for</p>
-      <div class="signup">
-      <a href="/free"><button  type="button"  class="submit-btn">Free Resources </button>
+      <h2>Ambulance details</h2>
+      <div class="input-group">
+        <input type="text" name="Address" id="loginUser" required>
+        <label for="loginUser" >Address</label>
       </div>
-      <div class="signup1">
-        <a href="/paid"><button  type="button"  class="submit-btn">Paid Resources </button>
-      </div>
-      
-      
+      <a href="/ambulance"><button  type="button"  class="submit-btn">Submit</button>
     </form>
 
+    <div id="forgot-pw">
+      <form action="" class="form" method="POST">
+        {% csrf_token %}
+        <a href="#" class="close">&times;</a>
+        <h2>Reset Password</h2>
+        <div class="input-group">
+          <input type="email" name="email" id="email" required>
+          <label for="email">Email</label>
+        </div>
+        <input type="submit" value="Submit" class="submit-btn">
+      </form>
+    </div>
+  </div>
 </body>
 </html>

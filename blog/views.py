@@ -14,10 +14,10 @@ def blogpost(request, id):
     post= Blogpost.objects.filter(post_id = id)[0]
     print(post)
     return render(request, 'blog/blogpost.html', {'post':post})
-
-def search(request):
-    query= request.GET.get('search')
-    allProds = []
+def first(request):
+    return render(request,"first.html")
+def forum(request):
+    return render(request,'blog/forum.html')
 
 
     
